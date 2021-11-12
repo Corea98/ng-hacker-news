@@ -3,7 +3,7 @@
   <button [ngClass]="{'selected': filter === 'faves'}" (click)="setFilter('faves')">My faves</button>
 </div>
 
-<div class="filters">
+<div class="framework-filter">
   <select (change)="changeFrameworkFilter($event)" [value]="selectedFramework">
     <option value="0" style="display: none;" disabled selected>Select your news</option>
     <option value="angular">Angular</option>

@@ -26,12 +26,12 @@
     border: 1px solid #1797ff;
 }
 
-/* FILTERS */
-.filters {
+/* FRAMEWORK FILTERS */
+.framework-filter {
     margin-top: 25px;
 }
 
-.filters > select {
+.framework-filter > select {
     width: 240px;
     height: 32px;
     padding: 5px 12px 5px 12px;
@@ -40,9 +40,10 @@
     background-color: #fff;
 }
 
+/* SELECT WITH IMAGE */
 
 @media (min-width: 1440px) {
-    .filters {
+    .framework-filter {
         margin-top: 63px;
     }
 }
