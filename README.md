@@ -1,3 +1,7 @@
+# Live demo
+
+Go to [Netlify](https://ocorea-hacker-news.netlify.app/)
+
 # NgHackerNews
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
