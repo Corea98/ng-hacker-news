@@ -1,0 +1,23 @@
+<div class="nav">
+  <button [ngClass]="{'selected': filter === 'all'}" (click)="setFilter('all')">All</button>
+  <button [ngClass]="{'selected': filter === 'faves'}" (click)="setFilter('faves')">My faves</button>
+</div>
+
+<div class="filters">
+  <select (change)="changeFrameworkFilter($event)" [value]="selectedFramework">
+    <option value="0" style="display: none;" disabled selected>Select your news</option>
+    <option value="angular">Angular</option>
+    <option value="reactjs">React JS</option>
+    <option value="vuejs">Vue JS</option>
+  </select>
+</div>
+
+<app-news></app-news>
+
+<app-pagination
+  (pageChange)="goToPage($event)"
+  [pageSelected]="pageSelected"
+  [pages]="pages"
+  [paginationShow]="paginationShow"
+  [pagesArrayShow]="pagesArrayShow"
+></app-pagination>
