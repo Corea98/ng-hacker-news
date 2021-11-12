@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { HackerNewsComponent } from './hacker-news/hacker-news.component';
 import { ComponentsModule } from '../components/components.module';
 import { NewsComponent } from './news/news.component';
+import { DateTimeAgoPipe } from '../pipes/date-time-ago.pipe';
 
 @NgModule({
   declarations: [
     HackerNewsComponent,
-    NewsComponent
+    NewsComponent,
+    DateTimeAgoPipe
   ],
   exports: [
     HackerNewsComponent
