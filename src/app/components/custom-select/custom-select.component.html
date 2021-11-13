@@ -1,0 +1,9 @@
+<div class="dropdown">
+    <span #dropdown (click)="toggleList()">{{ nameDisplay }}</span>
+    <ul #list [ngClass]="{'hide': !showList }">
+        <li *ngFor="let element of elements" (click)="setSelected(element)">
+            <img src="{{ element.imagePath }}">
+            {{ element.name }}
+        </li>
+    </ul>
+</div>

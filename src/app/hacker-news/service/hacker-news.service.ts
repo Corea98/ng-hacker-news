@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class HackerNewsService {
 
   private _apiUrl: string = "https://hn.algolia.com/api/v1/search_by_date";
-  private _selectedFramework: string = "0";
+  private _selectedFramework: string = "";
   private _pageSelected: number = 1;
   private _pages: number = 1;
   private _pagesArrayShow: number[] = [];
@@ -53,7 +53,7 @@ export class HackerNewsService {
    */
   callToApi() {
     this.fetchingApi = true;
-    const query: string = this.selectedFramework !== "0" ? `&query=${ this._selectedFramework }` : "";
+    const query: string = this.selectedFramework !== "" ? `&query=${ this._selectedFramework }` : "";
     this.http.get(`${ this._apiUrl }?page=${ this._pageSelected - 1 }${ query }`)
     .subscribe((resp: any) => {
       this.posts = resp.hits.map(({ author, story_title, story_url, created_at, objectID }: any) => ({ author, story_title, story_url, created_at, objectID, liked: this._likedPosts.includes(objectID) }))

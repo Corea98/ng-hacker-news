@@ -8,6 +8,12 @@ import { HackerNewsService } from '../service/hacker-news.service';
 })
 export class HackerNewsComponent {
 
+  selectFrameworkElements: any[] = [
+    { value: "angular", name: "Angular", imagePath: "/assets/images/icons/angular.png" },
+    { value: "reactjs", name: "Reactjs", imagePath: "/assets/images/icons/react.png" },
+    { value: "vuejs", name: "Vuejs", imagePath: "/assets/images/icons/vue.png" },
+  ]
+
   get selectedFramework(): string { return this.hackerNewsService.selectedFramework; }
   get filter(): string { return this.hackerNewsService.filter; }
 
@@ -26,8 +32,8 @@ export class HackerNewsComponent {
    * Change selected framework filter from select event.
    * @param {any} event
    */
-  changeFrameworkFilter(event: any): void {
-    this.hackerNewsService.selectedFramework = event.target.value;
+  changeFrameworkFilter(value: string): void {
+    this.hackerNewsService.selectedFramework = value;
     // Uncomment for go to page 1 every time filter changes
     // this.hackerNewsService.pageSelected = 1;
     

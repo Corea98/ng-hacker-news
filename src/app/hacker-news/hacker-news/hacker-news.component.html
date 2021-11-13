@@ -4,12 +4,19 @@
 </div>
 
 <div class="framework-filter">
-  <select (change)="changeFrameworkFilter($event)" [value]="selectedFramework">
+  <!-- <select (change)="changeFrameworkFilter($event)" [value]="selectedFramework">
     <option value="0" style="display: none;" disabled selected>Select your news</option>
     <option value="angular">Angular</option>
     <option value="reactjs">React JS</option>
     <option value="vuejs">Vue JS</option>
-  </select>
+  </select> -->
+
+  <app-custom-select 
+    (change)="changeFrameworkFilter($event)"
+    placeholder="Select your news"
+    [elements]="selectFrameworkElements"
+    [selected]="selectedFramework"
+  ></app-custom-select>
 </div>
 
 <app-news></app-news>
