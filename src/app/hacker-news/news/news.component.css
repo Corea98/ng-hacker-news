@@ -21,6 +21,7 @@
     padding: 25px 16px 23px 26px;
     display: grid;
     grid-template-columns: 24px auto;
+    grid-template-rows: 16px auto;
     grid-template-areas:
     "clock time"
     "title title";
@@ -45,6 +46,7 @@
     line-height: 1.43;
     letter-spacing: 0.25px;
     color: #6b6b6b;
+    align-self: start;
 }
 
 .new-card .news-right {
